@@ -1,4 +1,4 @@
-# 🛵 GigShield
+# 🛵 GigSure
 
 ## AI-Powered Parametric Income Insurance for Delivery Partners
 
@@ -63,7 +63,13 @@ Heavy rainfall hits Hyderabad (>70mm/hr).
 
 Rahul cannot safely ride his bike.
 
-GigShield detects rainfall data via Weather API and automatically credits **₹350 compensation**.
+GigShield detects the rainfall via Weather API, confirms the disruption in Rahul's zone, and automatically calculates his payout.
+
+```
+4 hours lost × ₹95/hr (Rahul's verified hourly rate) = ₹380 credited to UPI
+```
+
+He never filed anything. The money arrives before the rain stops.
 
 ---
 
@@ -71,17 +77,29 @@ GigShield detects rainfall data via Weather API and automatically credits **₹3
 
 Temperature reaches **45°C** in Hyderabad.
 
-Authorities issue a heat advisory.
+Authorities issue a heat advisory declaring outdoor work unsafe between 12 PM – 4 PM.
 
-GigShield detects the event and compensates workers for unsafe working hours.
+GigShield detects the advisory and calculates compensation for the blocked hours.
+
+```
+3 hours blocked × ₹95/hr = ₹285 credited to UPI
+```
+
+Rahul does not need to prove he stopped working. The zone advisory is enough.
 
 ---
 
 ### Scenario 3 — Curfew or Strike
 
-A sudden local strike blocks restaurant pickup zones.
+A sudden local strike blocks restaurant pickup zones for 5 hours.
 
-GigShield detects the disruption through civic alerts and automatically triggers payouts.
+GigShield detects the disruption through civic alerts. The zone closure is the proof — Rahul does not need to demonstrate inactivity.
+
+```
+5 hours blocked × ₹95/hr = ₹475 credited to UPI
+```
+
+If the weekly cap has not been reached, the full amount is paid.
 
 ---
 
@@ -155,10 +173,16 @@ Base Tier Price
 There is no daily cap. Workers receive full compensation for what they actually lost.
 
 ```
-Payout = Hours Lost × Worker's Hourly Rate
+Payout = Hours Lost × Worker's Verified Hourly Rate
 ```
 
+**How is the hourly rate determined?**
+
+The worker's hourly rate is calculated at onboarding using their platform earnings data (Zomato / Swiggy partner API). It is shown to the worker transparently before they purchase a policy and is locked in for the policy period — the insurer cannot change it after a disruption occurs.
+
 The only limit is the **weekly coverage cap**. If total claims in a week exceed the cap, the cap applies. Within the cap, every rupee of lost income is covered.
+
+> 📊 *Premium rates are indicative and will be actuarially validated using historical disruption frequency data in production.*
 
 ---
 
@@ -177,10 +201,12 @@ Claims trigger automatically when verified events occur.
 Claims trigger only if:
 
 ```
-External Event Detected
+External Event Detected in Worker's Zone
 AND
-Worker Inactivity Verified
+Worker's Policy is Active for That Week
 ```
+
+> ✅ **Worker-first design:** Claims are based on **zone-level disruption**, not individual inactivity. Workers who push through bad conditions are not penalised — the disruption event itself is the proof. If a worker chooses to continue working during an event, the payout still applies.
 
 ---
 
@@ -236,6 +262,8 @@ Detects anomalies such as:
 * GPS spoofing
 * duplicate claims
 * abnormal claim frequency
+
+> 🛡️ **Worker protection against false flags:** If the system flags a claim, it is held for manual review — not auto-rejected. Workers are notified immediately and can appeal within 48 hours. No claim is silently denied.
 
 ---
 
