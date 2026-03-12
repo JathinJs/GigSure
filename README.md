@@ -1,6 +1,6 @@
-# 🛵 GigSure
+# 🛵 GigShield
 
-## Ensuring income stability for gig workers
+## AI-Powered Parametric Income Insurance for Delivery Partners
 
 Built for **Guidewire DEVTrails 2026 Hackathon**
 
@@ -119,11 +119,11 @@ Workers **never need to manually file a claim**.
 
 Gig workers operate on **weekly earnings cycles**, so GigShield uses **weekly insurance pricing**.
 
-| Tier     | Weekly Premium | Coverage Limit | Daily Payout |
-| -------- | -------------- | -------------- | ------------ |
-| Basic    | ₹29            | ₹1,000         | ₹200         |
-| Standard | ₹59            | ₹2,500         | ₹450         |
-| Pro      | ₹99            | ₹5,000         | ₹800         |
+| Tier     | Weekly Premium | Weekly Coverage Cap |
+| -------- | -------------- | ------------------- |
+| Basic    | ₹29            | ₹1,000              |
+| Standard | ₹59            | ₹2,500              |
+| Pro      | ₹99            | ₹5,000              |
 
 ---
 
@@ -147,6 +147,18 @@ Base Tier Price
 + Forecast Risk Adjustment
 - Safe Zone Discount
 ```
+
+---
+
+## Payout Calculation
+
+There is no daily cap. Workers receive full compensation for what they actually lost.
+
+```
+Payout = Hours Lost × Worker's Hourly Rate
+```
+
+The only limit is the **weekly coverage cap**. If total claims in a week exceed the cap, the cap applies. Within the cap, every rupee of lost income is covered.
 
 ---
 
