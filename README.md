@@ -279,20 +279,19 @@ Used in the admin dashboard to forecast expected claim volumes.
 
 ### Frontend
 
-* React / Next.js 14
+* React
 * Tailwind CSS
-* Zustand
 * Recharts
-* Leaflet Maps
+* Axios (API calls)
 
 ---
 
 ### Backend
 
-* Node.js
-* Next.js API Routes
-* PostgreSQL
-* Supabase
+* Java — Spring Boot
+* Spring Security (Auth)
+* Spring Data JPA (Database ORM)
+* MySQL
 
 ---
 
