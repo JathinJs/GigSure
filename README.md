@@ -479,8 +479,8 @@ gigsure/
 
 | Member | Role |
 | -------- | ------------------------- |
-| Arjun Mehta | Team Lead — Full Stack (React + Spring Boot) |
-| Priya Sharma | Backend — APIs & Database |
+| Jathin Sekhar | Team Lead — Full Stack (React + Spring Boot) |
+| Balu | Backend — APIs & Database |
 | Kiran Reddy | AI / ML — Risk, Premium & Fraud Models |
 | Sneha Iyer | UI / UX — Design & Frontend |
 
